@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    
+<title>gib BG CTF CHALLANGE 1</title>
+
+</head>
+<body>
+    <div class="divAll">
+        <img src="img/gib.png" width="200px;" style="margin:0 auto;"/><br><br>
+        <h1 style="border-bottom:2px dashed green; margin-bottom:20px;">Welcome to <br>Gib BG CTF Challange #1</h1><br>
+		
+    </div>
+    <div class="terminal">
+        
+        <span class="dollar"></span>root: ls
+        <br/>
+        <span class="dollar"></span>BGT
+        <br/>
+        <span class="dollar"></span>cd BGT | ls
+        <br/>
+        <span class="dollar"></span>BILGI_GUVENLIGI CTF 
+        <br/>
+        <span class="dollar"></span>cd BILGI_GUVENLIGI CTF | ls
+        <br/>
+        <span class="dollar"></span>ctf_challange.txt
+        <br/>
+        <span class="dollar"></span>cat ctf_challange.txt
+        <br/>
+        <span class="dollar"></span> #Basarilar:))
+        <br/>
+        <span class="dollar"></span> exit
+        <br/>
+        <span class="dollar"></span> Burak BULUT | İsmail TEPELİ
+      </div>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+// Typewriter.js
+// https://github.com/ronv/Typewriter.js
+
+$.fn.typewriter = function() {
+this.each(function() {
+    var c = $(this),
+    b = c.html(),
+    a = 0,
+    d = 0;
+    c.html("");
+    var e = function() {
+    if ("<" == b.substring(a, a + 1)) {
+        var f = new RegExp(/<span class="instant"/),
+        g = new RegExp(/<span class="clear"/);
+        if (b.substring(a, b.length).match(f)) a += b.substring(a, b.length).indexOf("</span>") + 7;
+        else if (b.substring(a, b.length).match(g)) d = a, a += b.substring(a, b.length).indexOf("</span>") + 7;
+        else
+        for (;
+            ">" != b.substring(a, a + 1);) a++
+    }
+    c.html(b.substring(d, a++) + (a & 1 ? "_" : ""));
+    a >= b.length || setTimeout(e, 10 + 100 *
+        Math.random())
+    };
+    e()
+});
+return this
+};
+$(".terminal").typewriter();
+</script>
